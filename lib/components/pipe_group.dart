@@ -4,7 +4,7 @@ import 'package:flame_audio/flame_audio.dart';
 import 'package:flappy_bird_game/game/assets.dart';
 import 'package:flappy_bird_game/game/configuration.dart';
 import 'package:flappy_bird_game/game/flappy_bird_game.dart';
-import 'package:flappy_bird_game/game/pipe_position.dart';
+import 'package:flappy_bird_game/game/enums/pipe_position.dart';
 import 'package:flappy_bird_game/components/pipe.dart';
 
 class PipeGroup extends PositionComponent with HasGameRef<FlappyBirdGame> {
@@ -39,20 +39,13 @@ class PipeGroup extends PositionComponent with HasGameRef<FlappyBirdGame> {
     super.update(dt);
     position.x -= Config.gameSpeed * dt;
 
-    // if (position.x == 10) {
-    //   // removeFromParent();
-    //   updateScore();
-    // }
-
-    if (position.x < -50) {
+    if (position.x < -40) {
       removeFromParent();
       updateScore();
     }
 
     if (gameRef.isHit) {
       removeFromParent();
-      // removeFromParent();
-
       gameRef.isHit = false;
     }
   }
