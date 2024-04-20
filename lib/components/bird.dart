@@ -2,10 +2,10 @@ import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
 import 'package:flame_audio/flame_audio.dart';
-import 'package:flappy_bird_game/game/enums/bird_movement.dart';
-import 'package:flappy_bird_game/game/assets.dart';
-import 'package:flappy_bird_game/game/configuration.dart';
-import 'package:flappy_bird_game/game/flappy_bird.dart';
+import 'package:flappy_bird/game/enums/bird_movement.dart';
+import 'package:flappy_bird/game/assets.dart';
+import 'package:flappy_bird/game/configuration.dart';
+import 'package:flappy_bird/game/flappy_bird.dart';
 import 'package:flutter/material.dart';
 
 class Bird extends SpriteGroupComponent<BirdMovement>

@@ -1,11 +1,11 @@
 import 'dart:math';
 import 'package:flame/components.dart';
 import 'package:flame_audio/flame_audio.dart';
-import 'package:flappy_bird_game/game/assets.dart';
-import 'package:flappy_bird_game/game/configuration.dart';
-import 'package:flappy_bird_game/game/flappy_bird.dart';
-import 'package:flappy_bird_game/game/enums/pipe_position.dart';
-import 'package:flappy_bird_game/components/pipe.dart';
+import 'package:flappy_bird/game/assets.dart';
+import 'package:flappy_bird/game/configuration.dart';
+import 'package:flappy_bird/game/flappy_bird.dart';
+import 'package:flappy_bird/game/enums/pipe_position.dart';
+import 'package:flappy_bird/components/pipe.dart';
 
 class PipeGroup extends PositionComponent with HasGameRef<FlappyBird> {
   PipeGroup();

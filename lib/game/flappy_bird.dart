@@ -1,11 +1,11 @@
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
-import 'package:flappy_bird_game/components/background.dart';
-import 'package:flappy_bird_game/components/bird.dart';
-import 'package:flappy_bird_game/components/ground.dart';
-import 'package:flappy_bird_game/components/pipe_group.dart';
-import 'package:flappy_bird_game/game/configuration.dart';
+import 'package:flappy_bird/components/background.dart';
+import 'package:flappy_bird/components/bird.dart';
+import 'package:flappy_bird/components/ground.dart';
+import 'package:flappy_bird/components/pipe_group.dart';
+import 'package:flappy_bird/game/configuration.dart';
 import 'package:flutter/painting.dart';
 
 import '../components/clouds.dart';

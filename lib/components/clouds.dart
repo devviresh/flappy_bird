@@ -1,9 +1,9 @@
 import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/parallax.dart';
-import 'package:flappy_bird_game/game/assets.dart';
-import 'package:flappy_bird_game/game/configuration.dart';
-import 'package:flappy_bird_game/game/flappy_bird.dart';
+import 'package:flappy_bird/game/assets.dart';
+import 'package:flappy_bird/game/configuration.dart';
+import 'package:flappy_bird/game/flappy_bird.dart';
 
 class Clouds extends ParallaxComponent<FlappyBird> with HasGameRef<FlappyBird> {
   Clouds();

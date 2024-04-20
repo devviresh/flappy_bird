@@ -3,7 +3,7 @@ class Assets {
   static const ground = 'ground.png';
   static const clouds = 'clouds.png';
   static const pipeUp = 'pipe.png';
-  static const pipeDown = 'pipe_rotated.png';
+  static const pipeDown = 'pipe_down.png';
 
   static const birdMidFlap = 'bird_midflap.png';
   static const birdUpFlap = 'bird_upflap.png';
