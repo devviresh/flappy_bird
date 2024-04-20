@@ -4,10 +4,9 @@ import 'package:flame/flame.dart';
 import 'package:flame/parallax.dart';
 import 'package:flappy_bird_game/game/assets.dart';
 import 'package:flappy_bird_game/game/configuration.dart';
-import 'package:flappy_bird_game/game/flappy_bird_game.dart';
+import 'package:flappy_bird_game/game/flappy_bird.dart';
 
-class Ground extends ParallaxComponent<FlappyBirdGame>
-    with HasGameRef<FlappyBirdGame> {
+class Ground extends ParallaxComponent<FlappyBird> with HasGameRef<FlappyBird> {
   Ground();
 
   @override

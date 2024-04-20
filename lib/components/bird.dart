@@ -5,11 +5,11 @@ import 'package:flame_audio/flame_audio.dart';
 import 'package:flappy_bird_game/game/enums/bird_movement.dart';
 import 'package:flappy_bird_game/game/assets.dart';
 import 'package:flappy_bird_game/game/configuration.dart';
-import 'package:flappy_bird_game/game/flappy_bird_game.dart';
+import 'package:flappy_bird_game/game/flappy_bird.dart';
 import 'package:flutter/material.dart';
 
 class Bird extends SpriteGroupComponent<BirdMovement>
-    with HasGameRef<FlappyBirdGame>, CollisionCallbacks {
+    with HasGameRef<FlappyBird>, CollisionCallbacks {
   Bird();
 
   int score = 0;
@@ -47,12 +47,24 @@ class Bird extends SpriteGroupComponent<BirdMovement>
     add(
       MoveByEffect(
         Vector2(0, Config.gravity),
-        EffectController(duration: 0.2, curve: Curves.decelerate),
-        onComplete: () => current = BirdMovement.down,
+        EffectController(duration: 0.3, curve: Curves.decelerate),
+        onComplete: () => current = BirdMovement.middle,
       ),
     );
     FlameAudio.play(Assets.flying);
     current = BirdMovement.up;
+  }
+
+  void fall() {
+    add(
+      MoveByEffect(
+        Vector2(0, Config.fall),
+        EffectController(duration: 0.1, curve: Curves.decelerate),
+        onComplete: () => current = BirdMovement.middle,
+      ),
+    );
+    FlameAudio.play(Assets.falling);
+    current = BirdMovement.down;
   }
 
   @override

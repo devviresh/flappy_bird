@@ -1,9 +1,9 @@
 import 'package:flappy_bird_game/game/assets.dart';
-import 'package:flappy_bird_game/game/flappy_bird_game.dart';
+import 'package:flappy_bird_game/game/flappy_bird.dart';
 import 'package:flutter/material.dart';
 
 class GameOverScreen extends StatelessWidget {
-  final FlappyBirdGame game;
+  final FlappyBird game;
 
   const GameOverScreen({Key? key, required this.game}) : super(key: key);
 
@@ -22,15 +22,22 @@ class GameOverScreen extends StatelessWidget {
                   fontFamily: 'Game',
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 40),
               Image.asset(Assets.gameOver),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: onRestart,
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
-                child: const Text(
-                  'Restart',
-                  style: TextStyle(fontSize: 20),
+              const SizedBox(height: 40),
+              Container(
+                padding: const EdgeInsets.all(3),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white24),
+                child: ElevatedButton(
+                  onPressed: onRestart,
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+                  child: const Text(
+                    'Restart',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
                 ),
               ),
             ],
@@ -41,6 +48,7 @@ class GameOverScreen extends StatelessWidget {
   void onRestart() {
     game.bird.reset();
     game.overlays.remove('gameOver');
+    // game.overlays.add('mainMenu');
     game.resumeEngine();
   }
 }

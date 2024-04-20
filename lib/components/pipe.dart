@@ -3,10 +3,10 @@ import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:flappy_bird_game/game/assets.dart';
 import 'package:flappy_bird_game/game/configuration.dart';
-import 'package:flappy_bird_game/game/flappy_bird_game.dart';
+import 'package:flappy_bird_game/game/flappy_bird.dart';
 import 'package:flappy_bird_game/game/enums/pipe_position.dart';
 
-class Pipe extends SpriteComponent with HasGameRef<FlappyBirdGame> {
+class Pipe extends SpriteComponent with HasGameRef<FlappyBird> {
   Pipe({
     required this.pipePosition,
     required this.height,
@@ -18,8 +18,8 @@ class Pipe extends SpriteComponent with HasGameRef<FlappyBirdGame> {
 
   @override
   Future<void> onLoad() async {
-    final pipe = await Flame.images.load(Assets.pipe);
-    final pipeRotated = await Flame.images.load(Assets.pipeRotated);
+    final pipe = await Flame.images.load(Assets.pipeUp);
+    final pipeRotated = await Flame.images.load(Assets.pipeDown);
     size = Vector2(50, height);
 
     switch (pipePosition) {

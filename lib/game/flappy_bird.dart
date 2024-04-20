@@ -10,8 +10,9 @@ import 'package:flutter/painting.dart';
 
 import '../components/clouds.dart';
 
-class FlappyBirdGame extends FlameGame with TapDetector, HasCollisionDetection {
-  FlappyBirdGame();
+class FlappyBird extends FlameGame
+    with TapDetector, LongPressDetector, HasCollisionDetection {
+  FlappyBird();
 
   late Bird bird;
   Timer interval = Timer(Config.pipeInterval, repeat: true);
@@ -44,6 +45,11 @@ class FlappyBirdGame extends FlameGame with TapDetector, HasCollisionDetection {
   @override
   void onTap() {
     bird.fly();
+  }
+
+  @override
+  void onLongPress() {
+    bird.fall();
   }
 
   @override

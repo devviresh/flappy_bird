@@ -1,9 +1,9 @@
 import 'package:flappy_bird_game/game/assets.dart';
-import 'package:flappy_bird_game/game/flappy_bird_game.dart';
+import 'package:flappy_bird_game/game/flappy_bird.dart';
 import 'package:flutter/material.dart';
 
 class MainMenuScreen extends StatelessWidget {
-  final FlappyBirdGame game;
+  final FlappyBird game;
   static const String id = 'mainMenu';
 
   const MainMenuScreen({
@@ -27,7 +27,7 @@ class MainMenuScreen extends StatelessWidget {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(Assets.menu),
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
             ),
           ),
           child: Image.asset(Assets.message),
